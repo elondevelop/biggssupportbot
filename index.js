@@ -36,4 +36,4 @@ fs.readdir("./commands/", (err, files) => {
 // HANDLER
 
 
-client.login('NzExMDMyNjU3MjM2MDY2MzA0.Xr9HGA.hagoD3OQhP7-0Y3ZkPlLHCM8HME');
+client.login(token);
