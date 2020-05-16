@@ -19,9 +19,10 @@ const helpEmbed = new Discord.MessageEmbed()
     .setTimestamp()
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + 'help')
+    if (message.content.startsWith(prefix + 'help')) {
         message.channel.send(helpEmbed)
-}
+    }
+})
 
 client.on('message', message => {
         // check if it's a kick command
@@ -71,8 +72,9 @@ client.on('message', message => {
 })
     
 client.on('message', message => {
-    if (message.content.startsWith(prefix + 'ping')
+    if (message.content.startsWith(prefix + 'ping')) {
         message.channel.send('Pong! :ping_pong:')
+    }
 })    
     
 
