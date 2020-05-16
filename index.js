@@ -24,7 +24,7 @@ client.on('message', message => {
     }
 })
 
-client.on('message', message => {
+async function banCommand() {
         // check if it's a kick command
     if (message.content.startsWith('.ban')) {
         // get the first mention
@@ -34,7 +34,7 @@ client.on('message', message => {
         if (message.member.hasPermission('BAN_MEMBERS')) {
             try {
                 // kick him/her!
-                const bannedMember = await member.kick()
+                const bannedMember = await member.ban()
 
                 // tell the message author that this member was kicked
                 message.channel.send(`:wave: ${bannedMember.displayName} has been successfully banned.`)
@@ -46,15 +46,15 @@ client.on('message', message => {
             message.channel.send(`You don't have the permission to ban people.`)
         }
     }
-})
+}
     
-client.on('message', message => {
+async function kickCommand() {
      if (message.content.startsWith('.kick')) {
         // get the first mention
         const member = message.mentions.members.first()
 
         // check if the command author has permission to kick people
-        if (message.member.hasPermission('KICK_MEMBERS')) {
+        if (message.member.hasPermission('ADMINISTRATOR')) {
             try {
                 // kick him/her!
                 const kickedMember = await member.kick()
@@ -69,7 +69,7 @@ client.on('message', message => {
             message.channel.send(`You don't have the permission to kick people.`)
         }
     }
-})
+}
     
 client.on('message', message => {
     if (message.content.startsWith(prefix + 'ping')) {
@@ -78,4 +78,4 @@ client.on('message', message => {
 })    
     
 
-client.login(process.env.BOT_TOKEN);
+client.login('NzExMDMyNjU3MjM2MDY2MzA0.XsAMwg.4tm850GJDuMdO66MM75jNGfiKPg');
