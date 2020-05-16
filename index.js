@@ -36,4 +36,4 @@ fs.readdir("./commands/", (err, files) => {
 // HANDLER
 
 
-client.login(token);
+client.login(BOT_TOKEN);
