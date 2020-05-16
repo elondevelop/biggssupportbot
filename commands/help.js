@@ -9,7 +9,6 @@ const helpEmbed = new Discord.MessageEmbed()
 	.addFields(
 		{name : '.kick | .ban ', value: 'Instantly kicks/bans any member in the server if user is an Admin [.kick | .ban @MEMBER]' }
 	)
-	.setFooter('Report any bugs found on the support server (.inv)')
     .setTimestamp()
 
 exports.run = (client, message, args) => {
